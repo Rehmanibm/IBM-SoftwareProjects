@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.org-tree-container {
+  @apply overflow-x-auto;
+  min-height: 400px;
+  padding: 2rem;
+}
+
+.org-tree-node {
+  @apply bg-white rounded-lg shadow-md p-4 m-2;
+  min-width: 250px;
+  transition: all 0.2s ease-in-out;
+}
+
+.org-tree-label {
+  @apply text-gray-800 font-medium;
+  font-size: 0.95rem;
+}
+
+.org-tree-node:hover {
+  @apply bg-blue-50 transform scale-105;
+}
+
+.org-tree-node.selected {
+  @apply bg-blue-100 border-2 border-blue-500;
+}
+
+/* Custom styles for the org tree lines */
+.org-tree-node::before,
+.org-tree-node::after {
+  @apply bg-gray-300;
+}
+
+.org-tree-node::before {
+  @apply absolute top-1/2 left-0 w-4 h-0.5;
+}
+
+.org-tree-node::after {
+  @apply absolute top-0 left-1/2 w-0.5 h-4;
+}
+
+.org-tree-node:first-child::before {
+  @apply hidden;
+}
+
+.org-tree-node:last-child::before {
+  @apply hidden;
+}
+
+.org-tree-node:only-child::after {
+  @apply hidden;
+}
+
+/* Personnel list styles */
+.personnel-list {
+  @apply mt-8 bg-white rounded-lg shadow-md p-6;
+}
+
+.personnel-list h4 {
+  @apply text-xl font-semibold text-gray-800 mb-4;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.personnel-list ul {
+  @apply space-y-3;
+}
+
+.personnel-list li {
+  @apply bg-gray-50 p-4 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors;
+  border-left: 4px solid #3b82f6;
+} 
