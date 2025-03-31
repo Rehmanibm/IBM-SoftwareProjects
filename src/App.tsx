@@ -7,7 +7,7 @@ function App() {
   const [selectedView, setSelectedView] = useState<string | null>(null);
 
   return (
-    <Router>
+    <Router basename="/IBM-SoftwareProjects">
       <div className="min-h-screen bg-gray-50">
         <Routes>
           <Route 

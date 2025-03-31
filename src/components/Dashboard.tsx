@@ -21,7 +21,7 @@ function Dashboard() {
     const fetchData = async () => {
       try {
         console.log('Attempting to fetch Excel file...');
-        const response = await fetch('/2025IBMTechnologyCoverageData.xlsx');
+        const response = await fetch('/IBM-SoftwareProjects/2025IBMTechnologyCoverageData.xlsx');
         console.log('Response status:', response.status);
         
         if (!response.ok) {
